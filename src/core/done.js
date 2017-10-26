@@ -24,7 +24,7 @@ var done = function() {
 	var msg = ''
 	var groupedByFile = {}
 	var msgGrouped
-	var group = this.config.groupOutputByFile
+	var group = this.config.groupOutputByFile || true
 	var opts = this.config.reporterOptions || {}
 
 	this.state.exitCode = getExitCode( this.cache.errs.length, this.cache.warnings.length, this.config.maxErrors, this.config.maxWarnings )
